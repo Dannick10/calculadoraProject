@@ -69,11 +69,19 @@ op.map((el)=>{
                 display.innerHTML = back.substring(0, back.length -1) 
                 if(evt.target.innerHTML == 'x'){
                     display.innerHTML += '*'
-                } else{
-                display.innerHTML += evt.target.innerHTML
-                console.log(evt.target)
-                }
+                } 
+                
+                else if(evt.target.innerHTML == '÷') {
+                    display.innerHTML += '/'
+                }else {
+                 
+                    display.innerHTML += evt.target.innerHTML
+                    console.log(evt.target)
+                    
             }
+            
+  
+            } 
         }
 
         
