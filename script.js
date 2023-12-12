@@ -28,18 +28,6 @@ number.map((el)=>{
 paren.map((el)=>{
     el.addEventListener('click',(evt)=>{
 
-        if(verificParen == true){
-            if(evt.target.innerHTML != display.innerHTML){
-                const back =  display.innerHTML;
-                display.innerHTML = back.substring(0, back.length -1) 
-                if(evt.target.innerHTML == 'x'){
-                    display.innerHTML += '*'
-                } else{
-                display.innerHTML += evt.target.innerHTML
-                console.log(evt.target)
-                }
-            }
-        }
   
         if(!verificParen){
             verificParen= true
@@ -60,10 +48,13 @@ op.map((el)=>{
 
         if(display.innerHTML == '0'){
             verificop = true
-          
+            verificParen= false
+      
         }
 
         if(verificop == true){
+            verificParen= false
+      
             if(evt.target.innerHTML != display.innerHTML){
                 const back =  display.innerHTML;
                 display.innerHTML = back.substring(0, back.length -1) 
